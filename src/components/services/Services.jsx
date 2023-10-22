@@ -1,4 +1,5 @@
 import { moreServices, services } from "../../data/staticData";
+import service_1 from "../../assets/imgs/services/service_1.jpg";
 
 const Services = () => {
    return (
@@ -40,7 +41,7 @@ const Services = () => {
                   <div
                      key={i}
                      style={{
-                        backgroundImage: `url(./src/assets/imgs/services/${imgName})`,
+                        backgroundImage: `url(${imgName})`,
                      }}
                      className="service"
                   >

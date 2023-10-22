@@ -78,27 +78,27 @@ export const services = [
       text: "Nemo Enim At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis",
    },
 ];
-// export const moreServices = [service_1, service_2, service_3, service_4];
+
 export const moreServices = [
    {
       title: "Lobira Duno",
       text: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.",
-      imgName: "service_1.jpg",
+      imgName: service_1,
    },
    {
       title: "Limere Radses",
       text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.",
-      imgName: "service_2.jpg",
+      imgName: service_2,
    },
    {
       title: "Nive Lodo",
       text: "Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.",
-      imgName: "service_3.jpg",
+      imgName: service_3,
    },
    {
       title: "Pale Treda",
       text: "Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.",
-      imgName: "service_4.jpg",
+      imgName: service_4,
    },
 ];
 
