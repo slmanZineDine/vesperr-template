@@ -1,7 +1,36 @@
 import { aboutInfo } from "../../data/staticData";
 import aboutImg from "../../assets/imgs/about-img.svg";
+import { useGetAboutUsQuery } from "../../api/apiSlice";
 
 const About = () => {
+   // ################### RTK QUERY ###################
+   const { data: aboutUs, isSuccess } = useGetAboutUsQuery();
+
+   // ################### CONTENT ###################
+   let content;
+   if (isSuccess)
+      content = (
+         <div
+            className="about-info flex"
+            data-aos="fade-bottom"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+         >
+            <img src={aboutImg} alt="about-img" className="about-img" />
+            <div className="boxs">
+               {aboutUs?.Feature.map(({ icon, Discription, Title }, i) => (
+                  <div key={i} className="box flex-between">
+                     <i className={`bi bi-${icon} icon`}></i>
+                     <div className="info">
+                        <span className="number">{Title}</span>
+                        <p>{Discription}</p>
+                     </div>
+                  </div>
+               ))}
+            </div>
+         </div>
+      );
+
    return (
       <section id="about" className="container section">
          <h2
@@ -48,28 +77,7 @@ const About = () => {
                <button className="btn btn-primary">Learn More</button>
             </div>
          </div>
-         <div
-            className="about-info flex"
-            data-aos="fade-bottom"
-            data-aos-delay="500"
-            data-aos-duration="1000"
-         >
-            <img src={aboutImg} alt="about-img" className="about-img" />
-            <div className="boxs">
-               {aboutInfo.map(({ icon, number, specTitle, text }, i) => (
-                  <div key={i} className="box flex-between">
-                     <i className={`bi bi-${icon} icon`}></i>
-                     <div className="info">
-                        <span className="number">{number}</span>
-                        <p>
-                           <span className="special">{specTitle} </span>
-                           {text}
-                        </p>
-                     </div>
-                  </div>
-               ))}
-            </div>
-         </div>
+         {content}
       </section>
    );
 };

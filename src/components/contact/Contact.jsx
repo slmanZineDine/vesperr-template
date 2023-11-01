@@ -3,7 +3,7 @@ import Logo from "../shared/Logo";
 
 const Contact = () => {
    return (
-      <section className="container section contact">
+      <section className="container section contact" id="contact">
          <h2
             className="main-title"
             data-aos="fade-bottom"

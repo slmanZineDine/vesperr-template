@@ -1,13 +1,13 @@
 import { sponsors } from "../../data/staticData";
 
-const Sponsors = () => {
+const Sponsors = ({ clients }) => {
    return (
       <section className="sponsors">
          <div className="container">
-            {sponsors.map((spon, i) => (
+            {clients.map(({ Name, Image }, i) => (
                <img
-                  src={spon}
-                  alt="sponsor"
+                  src={Image}
+                  alt={Name}
                   key={i}
                   className="sponsor"
                   data-aos="zoom-in"

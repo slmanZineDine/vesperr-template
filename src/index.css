@@ -531,6 +531,58 @@ textarea:focus {
    }
 }
 
+/*=============== SERVICES ===============*/
+.team .bio {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+.team .our-team {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 1.5rem;
+   margin-bottom: 2rem;
+}
+.team .our-team .box {
+   box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+   border-radius: 0.3rem;
+   overflow: hidden;
+}
+.team .our-team .box .img {
+   position: relative;
+}
+.team .our-team .box .img .social {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   justify-content: center;
+   width: 100%;
+   padding: 1rem;
+   background-color: var(--third-color);
+   opacity: 0;
+   transition: all 0.8s;
+   gap: 1rem;
+}
+.team .our-team .box:hover .img .social {
+   opacity: 0.8;
+}
+.team .our-team .box .img .social .icon-wrap {
+   font-size: 1.2rem;
+}
+.team .our-team .box:hover .img .social .icon-wrap:hover {
+   color: var(--primary-color);
+}
+.team .our-team .box .info {
+   text-align: center;
+   padding-block: 1rem;
+}
+.team .our-team .box .info h2 {
+   margin-bottom: 0.5rem;
+}
+
+.team .our-team .box .info p {
+   font-size: 1rem;
+}
+
 /*=============== CONTACT ===============*/
 .contact .contact-container {
    gap: 0.5rem;

@@ -12,5 +12,8 @@ export { default as About } from "./about/About";
 // ########## Services ##########
 export { default as Services } from "./services/Services";
 
+// ########## Team ##########
+export { default as Team } from "./team/Team";
+
 // ########## Contact ##########
 export { default as Contact } from "./contact/Contact";

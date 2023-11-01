@@ -1,7 +1,15 @@
 import Sponsors from "./Sponsors";
 import heroImg from "../../assets/imgs/hero_img.png";
+import { useGetClinetsQuery } from "../../api/apiSlice";
 
 const Hero = () => {
+   // ################### RTK QUERY ###################
+   const { data: clients, isSuccess } = useGetClinetsQuery();
+
+   // ################### CONTENT ###################
+   let content;
+   if (isSuccess) content = <Sponsors clients={clients} />;
+
    return (
       <section className="hero">
          <div className="container flex-between">
@@ -40,7 +48,7 @@ const Hero = () => {
                data-aos="fade-left"
             />
          </div>
-         <Sponsors />
+         {content}
       </section>
    );
 };
