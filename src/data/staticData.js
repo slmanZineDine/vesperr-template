@@ -33,7 +33,7 @@ export const aboutInfo = [
    {
       icon: "emoji-smile",
       number: 65,
-      specTitle: "Happy Clients",
+      specTitle: "Happy Clientss",
       text: "consequuntur voluptas nostrum aliquid ipsam architecto ut.",
    },
    {
